@@ -1,13 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-:root {
-    --poppin-font: "Poppins", sans-serif;
-    --blue-primary: #3e86f5;
-    --gray-primary: #f8f9fc;
-}
-* {
-    margin: 0;
-    padding: 0;
-    color: white;
-    box-sizing: border-box;
-    font-family: var(--poppin-font);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ed7586c10395de1625d599b2a97313b53d9d33a39fff3c57b4c2335de0a573d
+size 337
