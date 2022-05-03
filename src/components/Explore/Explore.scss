@@ -1,0 +1,134 @@
+.nav-circle-template {
+    position: absolute;
+    top: 20%;
+    height: 105px;
+    width: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    border: 1px solid var(--blue-primary);
+    transition: all 1.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    button {
+        width: 88px;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        justify-content: center;
+        border: none;
+        background-color: var(--blue-primary);
+        cursor: pointer;
+        img {
+            width: 12px;
+        }
+    }
+}
+
+.explore-container {
+    position: relative;
+    height: 120vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    .explore-card:nth-child(2) {
+        background-position: 35% 50%;
+    }
+    .card-opacity {
+        @extend .nav-circle-template;
+        left: 10%;
+        z-index: 10;
+        opacity: 0;
+    }
+    .card-visible {
+        opacity: 1;
+    }
+    .explore-card {
+        cursor: pointer;
+        overflow: hidden;
+        flex-shrink: 1;
+        flex-basis: 33.3%;
+        height: 100%;
+        background-position: center;
+        background-size: 80em 120%;
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        position: relative;
+        transition: all 1.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        @media screen and (min-width: 1400px) {
+            background-size: 97em 140%;
+        }
+
+        .explore-typo {
+            transition: all 1.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            position: absolute;
+            top: 120%;
+            left: 10%;
+            p {
+                font-size: 19px;
+                margin-bottom: 25px;
+            }
+            button {
+                padding: 14px 45px;
+                font-weight: 500;
+                border: none;
+                background-color: var(--blue-primary);
+                border-radius: 10px;
+            }
+        }
+
+        .nav-circle {
+            @extend .nav-circle-template;
+            left: -30%;
+            transform: rotate(-180deg);
+        }
+
+        h2 {
+            transition: all 1.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            position: absolute;
+            left: 74%;
+            bottom: -10%;
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 108px;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+
+            color: #ffffff;
+
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
+            @media screen and (max-width: 1000px) {
+                font-size: 53px;
+                left: 64%;
+            }
+        }
+    }
+}
+.card-fullscreen {
+    flex-basis: 100% !important;
+    height: 100%;
+    // background-size: 100% 120% !important;
+
+    h2 {
+        transform: rotate(0) translateY(-450%) !important;
+        // top: 35% !important;
+        left: 10% !important;
+    }
+    .explore-typo {
+        top: 51% !important;
+    }
+    .nav-circle {
+        left: 10% !important;
+        transform: rotate(0deg) !important;
+    }
+}
+.card-shrink {
+    flex-basis: 0 !important;
+    .nav-circle {
+        left: -500% !important;
+        opacity: 0;
+    }
+}

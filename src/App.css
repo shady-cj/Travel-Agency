@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+#landing-layout {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.580838) 32.24%,
+            rgba(0, 0, 0, 0.486293) 62.09%,
+            rgba(0, 0, 0, 0) 98.06%
+        ),
+        url(./assets/firstBg.jpg);
+    background-position: center;
+    background-size: 120% 100%;
+    background-repeat: no-repeat;
+    padding: 30px 120px;
+}
+main {
+    padding-top: 90px;
+}
+main h4 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 72.8px;
+}
+main p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    margin-top: 12px;
+}
+main button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    width: 163px;
+    height: 54px;
+
+    background: var(--blue-primary);
+    border-radius: 10px;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#passes-layout {
+    height: 98vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("./assets/skater.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 100px;
+    padding-top: 120px;
+}
+#passes-layout h2 {
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 108px;
+    letter-spacing: -0.02em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#mobile-version {
+    display: none;
+    padding-top: 40px;
+}
+#mobile-version h3 {
+    color: black;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* define media query of max width 900px */
+@media (max-width: 900px) {
+    #landing-layout {
+        padding: 30px 30px;
+    }
+    #landing-layout h4 {
+        font-size: 35px;
+        line-height: 60px;
+    }
+    #landing-layout p {
+        font-size: 15px;
+        line-height: 30px;
+    }
+    #landing-layout button {
+        width: 130px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    #passes-layout {
+        padding-left: 30px;
+    }
+    #passes-layout h2 {
+        font-size: 40px;
+        line-height: 80px;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+#passes-layout button {
+    margin-top: 42px;
+    border: none;
+    width: 220px;
+    height: 58px;
+
+    background: var(--blue-primary);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* define media query of max width 768px */
+@media (max-width: 768px) {
+    .App {
+        display: none;
+    }
+    #mobile-version {
+        display: block;
+    }
 }

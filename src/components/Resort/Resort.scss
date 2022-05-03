@@ -1,0 +1,111 @@
+.resort__places {
+    padding: 85px 120px;
+    display: flex;
+    @media (max-width: 900px) {
+        padding: 60px 40px;
+    }
+
+    .resort__places-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        @media (max-width: 900px) {
+            align-items: flex-start;
+        }
+
+        .resort__places-flex-item {
+            width: 390px;
+            height: 93vh;
+            border-radius: 18px;
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 26px;
+            background-repeat: no-repeat;
+            position: relative;
+            padding: 0px 20px;
+            overflow: hidden;
+            cursor: pointer;
+            @media (max-width: 900px) {
+                width: 340px;
+                max-width: 390px;
+                min-width: 320px;
+                height: 75vh;
+            }
+            .resort-overlay {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                transition: all 0.4s ease-in-out;
+            }
+            .item-description {
+                position: absolute;
+                bottom: 50px;
+                z-index: 5;
+                width: calc(100% - 40px);
+                transform: translateY(300px);
+                transition: all 0.4s ease-in-out;
+                .description-title {
+                    font-weight: 600;
+                    font-size: 22.5px;
+                    line-height: 45px;
+                }
+                p {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 27px;
+
+                    color: rgba(255, 255, 255, 0.5);
+                }
+                button {
+                    margin-top: 20px;
+                    width: 100%;
+
+                    height: 50px;
+                    border: none;
+                    font-weight: 600;
+                    border-radius: 8px;
+                    background-color: var(--blue-primary);
+                }
+            }
+            &:hover {
+                .resort-overlay {
+                    opacity: 1;
+                }
+                .item-description {
+                    transform: translateY(0);
+                }
+            }
+        }
+        .resort__places-flex-item.flex-item-main {
+            .item-description {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .resort__places-flex:last-child {
+        margin-left: 26px;
+    }
+    .flex-large {
+        flex: 1;
+        .resort__places-title {
+            align-self: flex-start;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 135%;
+            margin-top: 1rem;
+            margin-bottom: 60px;
+            letter-spacing: -0.02em;
+
+            color: #000000;
+            @media (max-width: 900px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

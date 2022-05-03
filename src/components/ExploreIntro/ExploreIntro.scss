@@ -1,0 +1,51 @@
+.explore-intro {
+    background-color: var(--gray-primary);
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+    h3 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 135%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        margin-top: 10px;
+        margin-bottom: 37px;
+        color: #000000;
+        span {
+            color: var(--blue-primary);
+        }
+    }
+    p {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 150%;
+
+        /* or 36px */
+        text-align: center;
+
+        /* Black-75 */
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 120px;
+    }
+    h4 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        margin-bottom: 5px;
+        color: #000000;
+    }
+    img {
+        position: absolute;
+        left: 50%;
+        bottom: 11%;
+        width: 10px;
+        transform: translateX(-50%);
+    }
+}
